@@ -78,7 +78,12 @@ const showFinalResult = experimentResults => {
   console.log('トーナメント勝者の能力スコア(能力値＋努力値)の平均値: ' + Math.floor((winnerMeritSum / experimentResults.length) * 100) / 100)
 }
 
-// 指定した回数だけ実験を行う
+/**
+ * メイン関数
+ * @param experimentTimes - 実験回数
+ * @param roundTimes - トーナメントの回戦数。17回戦で131,072人の参加者になる≒10万人
+ * @param isProbabilisticBattle - 個々人の総合力により重み付けられた確率で勝敗が決まるか(true)、個々人の総合力のみに基づいて勝敗が決まるか(false)
+ */
 const main = (experimentTimes, roundTimes, isProbabilisticBattle) => {
   const experimentResults = _.range(experimentTimes).map(() => {
     const result = experiment(roundTimes, isProbabilisticBattle)
@@ -89,10 +94,4 @@ const main = (experimentTimes, roundTimes, isProbabilisticBattle) => {
   showFinalResult(experimentResults)
 }
 
-/**
- * メイン関数
- * @param experimentTimes - 実験回数
- * @param roundTimes - トーナメントの回戦数。17回戦で131,072人の参加者になる≒10万人
- * @param isProbabilisticBattle - 個々人の総合力により重み付けられた確率で勝敗が決まるか(true)、個々人の総合力のみに基づいて勝敗が決まるか(false)
- */
 main(100, 17, false)
