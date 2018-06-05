@@ -15,7 +15,7 @@ const generateContestants = roundTimes => _.range(2 ** roundTimes).map(() => {
 // 対象contestantの実力得点を算出する
 const getMeritScore = contestant => contestant.talent + contestant.effort
 
-// 対象contestantの最終得点を算出する(能力49％、努力、49％、運2％)
+// 対象contestantの最終得点を算出する(才能49％、努力、49％、運2％)
 const getFinalScore = contestant => (49 * contestant.talent + 49 * contestant.effort + 2 * contestant.luck) / 100
 
 // 1つのトーナメントの勝者を決定するために各ラウンドを実施する。ラウンドごとに再帰的に実行する
@@ -55,9 +55,9 @@ const experiment = (roundTimes, isProbabilisticBattle) => {
 
 // 1回の実験の結果を出力する
 const showExperimentResult = (winner, doesHighestMeritWin, highestMeritClub) => {
-  console.log('このトーナメントにおいて能力スコア(能力値＋努力値)が最も高い人の数: ' + highestMeritClub.length)
+  console.log('このトーナメントにおいて実力スコア(才能値＋努力値)が最も高い人の数: ' + highestMeritClub.length)
   if (!doesHighestMeritWin) {
-    console.log('☆☆☆☆能力スコア(能力値＋努力値)が最高ではないのに勝利☆☆☆')
+    console.log('☆☆☆☆実力スコア(才能値＋努力値)が最高ではないのに勝利☆☆☆')
   }
   console.log('winner:')
   console.log(winner)
@@ -73,9 +73,9 @@ const showFinalResult = experimentResults => {
   // トーナメント勝者の実力(talent + effort)の合計。後で平均の算出に使用する
   const winnerMeritSum = _.sumBy(experimentResults, r => getMeritScore(r.winner))
 
-  console.log('能力スコア(能力値＋努力値)が最も高い人がトーナメントで優勝する確率: ' + Math.floor((highestMeritWinTimes / experimentResults.length) * 100) + '%')
+  console.log('実力スコア(才能値＋努力値)が最も高い人がトーナメントで優勝する確率: ' + Math.floor((highestMeritWinTimes / experimentResults.length) * 100) + '%')
   console.log('トーナメント勝者の運の平均値: ' + Math.floor((winnerLuckSum / experimentResults.length) * 100) / 100)
-  console.log('トーナメント勝者の能力スコア(能力値＋努力値)の平均値: ' + Math.floor((winnerMeritSum / experimentResults.length) * 100) / 100)
+  console.log('トーナメント勝者の実力スコア(才能値＋努力値)の平均値: ' + Math.floor((winnerMeritSum / experimentResults.length) * 100) / 100)
 }
 
 /**
