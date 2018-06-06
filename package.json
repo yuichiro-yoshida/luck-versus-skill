@@ -6,5 +6,8 @@
   },
   "author": "",
   "license": "MIT",
-  "homepage": "https://github.com/yuichiro-yoshida/luck-versus-skill#readme"
+  "homepage": "https://github.com/yuichiro-yoshida/luck-versus-skill#readme",
+  "bin": {
+    "luck-versus-skill": "main.js"
+  }
 }

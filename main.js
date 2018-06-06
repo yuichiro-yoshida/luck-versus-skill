@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 const _ = require('./lodash')
 
 // 0〜100のランダム値を取得する
