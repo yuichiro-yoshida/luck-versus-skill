@@ -1,0 +1,15 @@
+{
+  "name": "luck-versus-skill",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {},
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/yuichiro-yoshida/luck-versus-skill#readme",
+  "bin": {
+    "luck-versus-skill": "main.js"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10"
+  }
+}

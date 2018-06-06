@@ -33,7 +33,7 @@
 
 ### 実行
 - 実行環境は Node.js v8.11.2
-- リポジトリをクローンし、 `node main.js`
+- `npx github:yuichiro-yoshida/luck-versus-skill`
     - または、[JSFiddle環境](https://jsfiddle.net/0crrv0ar/39/)にてexecボタンを実行すると、F12開発者ツールのコンソールに結果を出力する(最新のGoogleChrome環境で実行できることを確認)
 
 ### 結果
