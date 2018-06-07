@@ -32,8 +32,8 @@
         - 各勝負が各参加者の「スコアの大小により重みづけられた確率」で決まるのか、単純なスコアの大小で決まるのか (デフォルトは後者)
 
 ### 実行
-- 実行環境は Node.js v8.11.2
-- `npx github:yuichiro-yoshida/luck-versus-skill`
+- 動作確認環境は Node.js v8.11.2
+- LocalにNode.jsがあればリポジトリをクローンせずに次のコマンドで簡単に実行できます。`npx github:yuichiro-yoshida/luck-versus-skill`
     - または、[JSFiddle環境](https://jsfiddle.net/0crrv0ar/39/)にてexecボタンを実行すると、F12開発者ツールのコンソールに結果を出力する(最新のGoogleChrome環境で実行できることを確認)
 
 ### 結果
